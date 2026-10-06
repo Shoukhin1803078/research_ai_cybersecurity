@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SentinelLLM analyst output",
+  "type": "object",
+  "required": [
+    "incident_id",
+    "hypothesis",
+    "confidence",
+    "claims",
+    "supporting_evidence",
+    "contradicting_evidence",
+    "recommended_action",
+    "unsupported_claims"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "incident_id": { "type": "string" },
+    "hypothesis": { "type": "string", "minLength": 1 },
+    "confidence": { "enum": ["low", "medium", "high"] },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["text", "evidence"],
+        "additionalProperties": false,
+        "properties": {
+          "text": { "type": "string", "minLength": 1 },
+          "evidence": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "supporting_evidence": { "type": "array", "items": { "type": "string" } },
+    "contradicting_evidence": { "type": "array", "items": { "type": "string" } },
+    "recommended_action": { "enum": ["none", "monitor", "alert", "suspend", "isolate", "quarantine"] },
+    "unsupported_claims": { "type": "array", "items": { "type": "string" } }
+  }
+}

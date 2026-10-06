@@ -1,0 +1,7 @@
+experiment_id,date,stage,model,features,dataset_version,prompt_version,seed,precision,recall,f1,pr_auc,fpr,notes
+bl-logistic_regression-seed20260901,2026-10-06T15:14:07Z,baseline,logistic_regression,17_tabular,synthetic-1.0-seed20260901,,20260901,1.0000,1.0000,1.0000,1.0000,0.0000,family-aware split; benign_quarantine_rate=0.000
+bl-random_forest-seed20260901,2026-10-06T15:14:07Z,baseline,random_forest,17_tabular,synthetic-1.0-seed20260901,,20260901,1.0000,0.6667,0.8000,1.0000,0.0000,family-aware split; benign_quarantine_rate=0.000
+fusion-rules_only-seed20260901,2026-10-06T15:14:10Z,fusion,rules_only,rules+ml,synthetic-1.0-seed20260901,,20260901,1.0000,0.3333,0.5000,1.0000,0.0000,risk fusion; threshold=60; benign_quarantine_rate=0.000
+fusion-ml_only-seed20260901,2026-10-06T15:14:10Z,fusion,ml_only,rules+ml,synthetic-1.0-seed20260901,,20260901,0.0000,0.0000,0.0000,1.0000,0.0000,risk fusion; threshold=60; benign_quarantine_rate=0.000
+fusion-rules_ml_fusion-seed20260901,2026-10-06T15:14:10Z,fusion,rules_ml_fusion,rules+ml,synthetic-1.0-seed20260901,,20260901,1.0000,1.0000,1.0000,1.0000,0.0000,risk fusion; threshold=60; benign_quarantine_rate=0.000
+llm-rule_based,2026-10-06T15:14:11Z,llm,rule_based,structured_incident,synthetic-1.0,analyst-v1,,1.0000,1.0000,1.0000,,,grounding=1.000; hallucination=0.000; no_unsupported=1.000
