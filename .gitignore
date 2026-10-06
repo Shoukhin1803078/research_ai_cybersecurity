@@ -1,0 +1,29 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Agent tooling ---
+.commandcode/
+
+# --- Generated ML artifacts (regenerable from scripts) ---
+sentinelllm/reports/figures/
+sentinelllm/reports/models/*.joblib
+sentinelllm/data_synthetic/*.jsonl
+sentinelllm/data_synthetic/*.csv
+
+# Keep the experiment log tracked
+!sentinelllm/reports/experiments.csv

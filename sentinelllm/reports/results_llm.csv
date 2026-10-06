@@ -1,0 +1,2 @@
+backend,prompt_version,n_incidents,schema_valid_rate,grounding_rate,hallucination_rate,no_unsupported_claim_rate,incidents_with_unknown_ids,concealed_unsupported_claims,classification_accuracy,classification_precision,classification_recall,classification_f1
+rule_based,analyst-v1,61,1.0,1.0,0.0,1.0,0,0,1.0,1.0,1.0,1.0

@@ -1,0 +1,4 @@
+config,threshold,precision,recall,f1,pr_auc,fpr,benign_quarantine_rate
+rules_only,60,1.0,0.3333333333333333,0.5,1.0,0.0,0.0
+ml_only,60,0.0,0.0,0.0,1.0,0.0,0.0
+rules_ml_fusion,60,1.0,1.0,1.0,1.0,0.0,0.0
